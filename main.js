@@ -57,15 +57,19 @@ function gcd() {
 
         // Perform division until the remainder is 0 or 1
         while (remainder.length !== 1 && remainder.length !== 0) {
+            previousRemainder = remainder;
             const temp = divideArraysMod(divisor, remainder, 2);
             remainder = removeLeadingZeros(temp.remainder);
             divisor = removeLeadingZeros(temp.divisor || divisor);
+            if (remainder.length === 0) {
+                divisor = previousRemainder;
+            }
         }
 
         const result = remainder[0] === 1 ? '1' : parseNumberToPolynomial(divisor);
         document.getElementById('gcdResult').innerText = 'Result: ' + result;
 
-    } catch (e) {
+    } catch(e){
         alert(e.message);
     }
 }
