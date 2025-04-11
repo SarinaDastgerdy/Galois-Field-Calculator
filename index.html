@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GF(2^8) Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="University Logo" class="university-logo">
+            <div class="header-info">
+                <h1>Galois Field Calculator</h1>
+                <p>Department of Computer Science, University of Guelph, ON, Canada</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="options-container">
+        <div class="options">
+            <button onclick="toggleBold(this)" id="gcdButton">GCD</button>
+            <button onclick="toggleBold(this)" id="multiplicationButton">Multiplication/Addition</button>            
+        </div>
+
+        <div class="content">
+            <div id="gcdContent" class="hidden">
+                <!-- GCD operation inputs -->
+                <div class="gcd-inputs">
+                    <p>Enter polynomials in descending order (e.g., x^5 + x^3 + x). Both forms x or x^1, and 1 or x^0 are acceptable.</p>
+                    <input type="text" id="gcdInput1" placeholder="First Polynomial">
+                    <input type="text" id="gcdInput2" placeholder="Second Polynomial">
+                </div>
+                <div class="buttons-row">
+                    <button onclick="gcd()">Calculate GCD</button>
+                </div>
+                <p id="gcdResult"></p>
+            </div>
+
+            <div id="multiplicationContent" class="hidden">
+                <!-- Multiplication/Addition operation inputs -->
+                <div class="multiplication-inputs">
+                    <p>Enter polynomials in descending order (e.g., x^5 + x^3 + x). Both forms x or x^1, and 1 or x^0 are acceptable.</p>
+                    <input type="text" id="polynomialInput1" placeholder="First Polynomial">
+                    <input type="text" id="polynomialInput2" placeholder="Second Polynomial">
+                    <input type="text" id="modulusInput" placeholder="Modulus Polynomial">
+                </div>
+                <div class="buttons-row">
+                    <button onclick="sumModulus()">Add</button>
+                    <button onclick="multiplyModulus()">Multiply</button>
+                </div>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container left">
+            <p>Created by Sarina Dastgerdy</p>
+            <p>Email: sdastger@uoguelph.ca</p>
+            <p>Cryptography Project, Winter 2024</p>
+            <p>Supervisor: Professor Charlie Obimbo</p>
+        </div>
+        <div class="footer-container right">
+            <p>Current Time: <span id="currentTime"></span></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

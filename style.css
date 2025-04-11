@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.university-logo {
+    width: 220px; /* Logo size adjustment */
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-info {
+    text-align: left;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+    border-right: 1px solid #42f5bf; /* Visual separation from content */
+}
+
+.options button {
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 5%;
+    flex-grow: 1; /* Allows content to grow and fill space */
+}
+
+.hidden {
+    display: none;
+}
+
+.content-section,
+.multiplication-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.multiplication-inputs {
+    margin-bottom: 10px; /* Spacing between inputs and buttons */
+}
+
+.buttons-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons-row button {
+    margin-right: 10px;
+}
+
+.buttons-row button:last-child {
+    margin-right: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 10cm;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    color: #007bff; /* Default button color */
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+    background: none;
+    text-decoration: underline;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+button.bold {
+    font-weight: bold; /* Highlighted button state */
+}
+
+button:hover {
+    color: #191b1d; /* Hover effect */
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container p {
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+
+.footer-container.left {
+    justify-content: flex-start;
+}
+
+.footer-container.right {
+    justify-content: flex-end;
+    margin-right: 2%;
+}
