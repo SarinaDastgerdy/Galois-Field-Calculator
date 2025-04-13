@@ -54,7 +54,7 @@ function gcd() {
         }
 
         let { remainder } = divideArraysMod(dividend, divisor, 2);
-
+        remainder = removeLeadingZeros(remainder);
         // Perform division until the remainder is 0 or 1
         while (remainder.length !== 1 && remainder.length !== 0) {
             previousRemainder = remainder;
